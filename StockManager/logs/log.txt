@@ -1,0 +1,211 @@
+Invalid symbol - AA-B
+Invalid symbol - ABR-A
+Invalid symbol - ABR-C
+Invalid symbol - AFS-A
+Invalid symbol - AFS-C
+Invalid symbol - AFS-E
+Invalid symbol - AGM-C
+Invalid symbol - AGO-E
+Invalid symbol - AHL-B
+Invalid symbol - AHT-A
+Invalid symbol - AHT-E
+Invalid symbol - AIG.W
+Invalid symbol - AIV-Z
+Invalid symbol - AKO.B
+Invalid symbol - ALL-B
+Invalid symbol - ALL-D
+Invalid symbol - ALL-F
+Invalid symbol - AMH-A
+Invalid symbol - AMH-C
+Invalid symbol - AMH-E
+Invalid symbol - AMT-B
+Invalid symbol - ANH-A
+Invalid symbol - ANH-C
+Invalid symbol - ARE-D
+Invalid symbol - ARP-D
+Invalid symbol - ARR-B
+Invalid symbol - ASB-C
+Invalid symbol - AXS-C
+Total stock details to be dumped in file 113
+Total invalid stock [abr-a, afs-e, aig.w, abr-c, afs-c, aht-e, afs-a, aht-a, asb-c, amt-b, aa-b, amh-c, agm-c, amh-a, amh-e, anh-a, ago-e, are-d, ako.b, all-d, aiv-z, all-f, arp-d, arr-b, anh-c, ahl-b, axs-c, all-b]
+Total stock details to be dumped in file 0
+Invalid symbol - AA-B
+Invalid symbol - ABR-A
+Invalid symbol - ABR-C
+Invalid symbol - AFS-A
+Invalid symbol - AFS-C
+Invalid symbol - AFS-E
+Invalid symbol - AGM-C
+Invalid symbol - AGO-E
+Invalid symbol - AHL-B
+Invalid symbol - AHT-A
+Invalid symbol - AHT-E
+Invalid symbol - AIG.W
+Invalid symbol - AIV-Z
+Invalid symbol - AKO.B
+Invalid symbol - ALL-B
+Invalid symbol - ALL-D
+Invalid symbol - ALL-F
+Invalid symbol - AMH-A
+Invalid symbol - AMH-C
+Invalid symbol - AMH-E
+Invalid symbol - AMT-B
+Invalid symbol - ANH-A
+Invalid symbol - ANH-C
+Invalid symbol - ARE-D
+Invalid symbol - ARP-D
+Invalid symbol - ARR-B
+Invalid symbol - ASB-C
+Invalid symbol - AXS-C
+Total stock details to be dumped in file 113
+Total invalid stock [abr-a, afs-e, aig.w, abr-c, afs-c, aht-e, afs-a, aht-a, asb-c, amt-b, aa-b, amh-c, agm-c, amh-a, amh-e, anh-a, ago-e, are-d, ako.b, all-d, aiv-z, all-f, arp-d, arr-b, anh-c, ahl-b, axs-c, all-b]
+Total stock details to be dumped in file 0
+Invalid symbol - AGM-C
+Invalid symbol - AGO-E
+Invalid symbol - AA-B
+Invalid symbol - AHL-B
+Invalid symbol - ABR-A
+Invalid symbol - ABR-C
+Invalid symbol - AHT-A
+Invalid symbol - AHT-E
+Invalid symbol - AIG.W
+Invalid symbol - AIV-Z
+Invalid symbol - AKO.B
+Invalid symbol - ALL-B
+Invalid symbol - ALL-D
+Invalid symbol - ALL-F
+Invalid symbol - AMH-A
+Invalid symbol - AFS-A
+Invalid symbol - AFS-C
+Invalid symbol - AFS-E
+Invalid symbol - AMH-C
+Invalid symbol - AMH-E
+Invalid symbol - AMT-B
+Invalid symbol - ANH-A
+Invalid symbol - ANH-C
+Invalid symbol - ARE-D
+Invalid symbol - ARP-D
+Invalid symbol - ARR-B
+Invalid symbol - ASB-C
+Invalid symbol - AXS-C
+Total stock details to be dumped in file 113
+Total invalid stock [abr-a, aig.w, afs-e, abr-c, aht-e, afs-c, afs-a, aht-a, asb-c, amt-b, aa-b, amh-c, agm-c, amh-a, amh-e, anh-a, ago-e, are-d, ako.b, all-d, aiv-z, all-f, arp-d, arr-b, anh-c, ahl-b, axs-c, all-b]
+Invalid symbol - AA-B
+Invalid symbol - ABR-A
+Invalid symbol - ABR-C
+Invalid symbol - AFS-A
+Invalid symbol - AFS-C
+Invalid symbol - AFS-E
+Invalid symbol - AGM-C
+Invalid symbol - AGO-E
+Invalid symbol - AHL-B
+Invalid symbol - AHT-A
+Invalid symbol - AHT-E
+Invalid symbol - AIG.W
+Invalid symbol - AIV-Z
+Invalid symbol - AKO.B
+Invalid symbol - ALL-B
+Invalid symbol - ALL-D
+Invalid symbol - ALL-F
+Invalid symbol - AMH-A
+Invalid symbol - AMH-C
+Invalid symbol - AMH-E
+Invalid symbol - AMT-B
+Invalid symbol - ANH-A
+Invalid symbol - ANH-C
+Invalid symbol - ARE-D
+Invalid symbol - ARP-D
+Invalid symbol - ARR-B
+Invalid symbol - ASB-C
+Invalid symbol - AXS-C
+Total stock details to be dumped in file 113
+Total invalid stock [abr-a, afs-e, aig.w, abr-c, afs-c, aht-e, afs-a, aht-a, asb-c, amt-b, aa-b, amh-c, agm-c, amh-a, amh-e, anh-a, ago-e, are-d, ako.b, all-d, aiv-z, all-f, arp-d, arr-b, anh-c, ahl-b, axs-c, all-b]
+Invalid symbol - AA-B
+Invalid symbol - ABR-A
+Invalid symbol - ABR-C
+Invalid symbol - AFS-A
+Invalid symbol - AFS-C
+Invalid symbol - AFS-E
+Invalid symbol - AGM-C
+Invalid symbol - AGO-E
+Invalid symbol - AHL-B
+Invalid symbol - AHT-A
+Invalid symbol - AHT-E
+Invalid symbol - AIG.W
+Invalid symbol - AIV-Z
+Invalid symbol - AKO.B
+Invalid symbol - ALL-B
+Invalid symbol - ALL-D
+Invalid symbol - ALL-F
+Invalid symbol - AMH-A
+Invalid symbol - AMH-C
+Invalid symbol - AMH-E
+Invalid symbol - AMT-B
+Invalid symbol - ANH-A
+Invalid symbol - ANH-C
+Invalid symbol - ARE-D
+Invalid symbol - ARP-D
+Invalid symbol - ARR-B
+Invalid symbol - ASB-C
+Invalid symbol - AXS-C
+Total stock details to be dumped in file 113
+Total invalid stock [abr-a, afs-e, aig.w, abr-c, afs-c, aht-e, afs-a, aht-a, asb-c, amt-b, aa-b, amh-c, agm-c, amh-a, amh-e, anh-a, ago-e, are-d, ako.b, all-d, aiv-z, all-f, arp-d, arr-b, anh-c, ahl-b, axs-c, all-b]
+Invalid symbol - AA-B
+Invalid symbol - ABR-A
+Invalid symbol - ABR-C
+Invalid symbol - AFS-A
+Invalid symbol - AFS-C
+Invalid symbol - AFS-E
+Invalid symbol - AGM-C
+Invalid symbol - AGO-E
+Invalid symbol - AHL-B
+Invalid symbol - AHT-A
+Invalid symbol - AHT-E
+Invalid symbol - AIG.W
+Invalid symbol - AIV-Z
+Invalid symbol - AKO.B
+Invalid symbol - ALL-B
+Invalid symbol - ALL-D
+Invalid symbol - ALL-F
+Invalid symbol - AMH-A
+Invalid symbol - AMH-C
+Invalid symbol - AMH-E
+Invalid symbol - AMT-B
+Invalid symbol - ANH-A
+Invalid symbol - ANH-C
+Invalid symbol - ARE-D
+Invalid symbol - ARP-D
+Invalid symbol - ARR-B
+Invalid symbol - ASB-C
+Invalid symbol - AXS-C
+Total stock details to be dumped in file 113
+Total invalid stock [axs-c]
+Invalid symbol - AA-B
+Invalid symbol - ABR-A
+Invalid symbol - ABR-C
+Invalid symbol - ARE-D
+Invalid symbol - ARP-D
+Invalid symbol - AFS-A
+Invalid symbol - AFS-C
+Invalid symbol - AFS-E
+Invalid symbol - ARR-B
+Invalid symbol - ASB-C
+Invalid symbol - AGM-C
+Invalid symbol - AGO-E
+Invalid symbol - AHL-B
+Invalid symbol - AHT-A
+Invalid symbol - AHT-E
+Invalid symbol - AIG.W
+Invalid symbol - AIV-Z
+Invalid symbol - AXS-C
+Invalid symbol - AKO.B
+Invalid symbol - ALL-B
+Invalid symbol - ALL-D
+Invalid symbol - ALL-F
+Invalid symbol - AMH-A
+Invalid symbol - AMH-C
+Invalid symbol - AMH-E
+Invalid symbol - AMT-B
+Invalid symbol - ANH-A
+Invalid symbol - ANH-C
+
