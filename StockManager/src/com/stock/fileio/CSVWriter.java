@@ -1,7 +1,7 @@
 package com.stock.fileio;
 
 import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
@@ -13,31 +13,54 @@ public class CSVWriter {
 
 	private static final String CSV_HEADER = "Stock Symbol,Current Price,Year Target Price,Year High,Year Low";
 
-	public static void dumpStockDetailsAsCSV(List<StockDetailsPojo> stockDetailList, String targetFile)
-			throws IOException {
+	private String targetFile;
 
+	private boolean writeHeader = true;
+	private FileWriter fileWriter;
+	private BufferedWriter bufferedWriter;
+
+	public CSVWriter(String targetFile) throws IOException {
+		new File(targetFile).delete();
+		fileWriter = new FileWriter(targetFile, true);
+		bufferedWriter = new BufferedWriter(fileWriter);
+		this.targetFile = targetFile;
+	}
+
+	public void close() {
+		FileLogger.getInstance().log("Total invalid stock " + SymbolChecker.getInstance().getInvalidSymbols());
+		try {
+			if (bufferedWriter != null) {
+				bufferedWriter.flush();
+				bufferedWriter.close();
+			}
+		} catch (IOException e) {
+		}
+		try {
+			if (fileWriter != null) {
+				fileWriter.close();
+			}
+		} catch (IOException e) {
+		}
+	}
+
+	public void appendStockDetailsAsCSV(List<StockDetailsPojo> stockDetailList) throws IOException {
 		if (stockDetailList == null || stockDetailList.isEmpty()) {
 			return;
 		}
-		try (FileWriter fileWriter = new FileWriter(targetFile);
-				BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);) {
-			try {
+		try {
+			if (writeHeader) {
 				bufferedWriter.write(CSV_HEADER);
 				bufferedWriter.write("\n\r");
-				for (StockDetailsPojo stockDetail : stockDetailList) {
-					bufferedWriter.write(stockDetail.toCSVString());
-					bufferedWriter.write("\n\r");
-				}
-				bufferedWriter.flush();
-				FileLogger.getInstance().log("Total invalid stock " + SymbolChecker.getInstance().getInvalidSymbols());
-			} catch (IOException e) {
-				FileLogger.getInstance()
-						.log("Error while writing the file [ " + targetFile + "], error - " + e.getMessage());
-				throw e;
-			} finally {
+				writeHeader = false;
 			}
-		} catch (FileNotFoundException e) {
-			FileLogger.getInstance().log("Invalid file to wrtie stock details to, error - " + e.getMessage());
+			for (StockDetailsPojo stockDetail : stockDetailList) {
+				bufferedWriter.write(stockDetail.toCSVString());
+				bufferedWriter.write("\n\r");
+			}
+			bufferedWriter.flush();
+		} catch (IOException e) {
+			FileLogger.getInstance()
+					.log("Error while writing the file [ " + targetFile + "], error - " + e.getMessage());
 			throw e;
 		} finally {
 		}

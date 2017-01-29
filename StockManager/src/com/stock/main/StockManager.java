@@ -110,7 +110,9 @@ public class StockManager implements IStockManager {
 		System.out.println("Shutting all the executor.. wait");
 		executor.shutdown();
 		try {
-			executor.awaitTermination(60, TimeUnit.SECONDS);
+			if (!executor.awaitTermination(5, TimeUnit.SECONDS)) {
+				executor.shutdownNow();
+			}
 		} catch (InterruptedException e) {
 		}
 		System.out.println("Shutdown completed");

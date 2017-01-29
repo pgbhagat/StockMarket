@@ -14,9 +14,15 @@ public class StockCrawlerConsumer implements Runnable {
 
 	CrawledSubResult subResult;
 	List<StockDetailsPojo> tmpList = new ArrayList<StockDetailsPojo>();
+	CSVWriter writer;
 
 	public StockCrawlerConsumer(CrawledSubResult subResult) {
 		this.subResult = subResult;
+		try {
+			writer = new CSVWriter(StockManager.CSV_FILE);
+		} catch (IOException e) {
+			FileLogger.getInstance().log("File operation error, will not write csv file, error - " + e.getMessage());
+		}
 	}
 
 	@Override
@@ -28,29 +34,44 @@ public class StockCrawlerConsumer implements Runnable {
 					if (subResult.list.isEmpty()) {
 						subResult.wait();
 					}
-					tmpList.addAll(subResult.list);
-					subResult.list.clear();
-					subResult.notifyAll();
+					StockCacheManager.getInstance().putAll(subResult.list);
+					if (writer != null) {
+						try {
+							FileLogger.getInstance()
+									.log("Total stock details to be dumped in file " + subResult.list.size());
+							writer.appendStockDetailsAsCSV(subResult.list);
+						} catch (IOException e) {
+							FileLogger.getInstance()
+									.log("Warn: Exception in StockCrawlerConsumer.dumpStockDetailsAsCSV, error - "
+											+ e.getLocalizedMessage());
+						}
+					}
 				} catch (InterruptedException e) {
 					FileLogger.getInstance()
 							.log("Warn: Exception in StockCrawlerConsumer, error - " + e.getLocalizedMessage());
 				}
-				StockCacheManager.getInstance().putAll(tmpList);
-			}
-			if (!subResult.list.isEmpty()) {
-				tmpList.addAll(subResult.list);
 				subResult.list.clear();
 				subResult.notifyAll();
-				StockCacheManager.getInstance().putAll(tmpList);
-			}
-		}
+				System.gc();
 
-		try {
-			FileLogger.getInstance().log("Total stock details to be dumped in file " + tmpList.size());
-			CSVWriter.dumpStockDetailsAsCSV(tmpList, StockManager.CSV_FILE);
-		} catch (IOException e) {
-			FileLogger.getInstance().log("Warn: Exception in StockCrawlerConsumer.dumpStockDetailsAsCSV, error - "
-					+ e.getLocalizedMessage());
+			}
+			if (!subResult.list.isEmpty()) {
+				StockCacheManager.getInstance().putAll(subResult.list);
+				if (writer != null) {
+					try {
+						FileLogger.getInstance()
+								.log("Total stock details to be dumped in file " + subResult.list.size());
+						writer.appendStockDetailsAsCSV(subResult.list);
+					} catch (IOException e) {
+						FileLogger.getInstance()
+								.log("Warn: Exception in StockCrawlerConsumer.dumpStockDetailsAsCSV, error - "
+										+ e.getLocalizedMessage());
+					}
+				}
+				subResult.list.clear();
+				subResult.notifyAll();
+				System.gc();
+			}
 		}
 
 	}
