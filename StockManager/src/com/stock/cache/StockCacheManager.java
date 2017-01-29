@@ -9,9 +9,13 @@ import java.nio.channels.FileChannel;
 import java.nio.channels.FileLock;
 import java.util.List;
 
+import com.stock.crawler.StockAPICrawledResultProcessor;
+import com.stock.crawler.StockAPICrawlerImpl;
 import com.stock.fileio.StockDetailsPojo;
 import com.stock.log.FileLogger;
 import com.stock.main.StockManager;
+import com.stock.query.QueryFormatter;
+import com.stock.query.SymbolChecker;
 
 public class StockCacheManager {
 
@@ -39,10 +43,23 @@ public class StockCacheManager {
 		cache.put(stock.getStockSymbol().toLowerCase(), stock);
 	}
 
-	public synchronized StockDetailsPojo get(String symbol) {
-		StockDetailsPojo result = cache.get(symbol.toLowerCase());
-		if (result == null) {
+	public StockDetailsPojo get(String symbol) {
+		StockDetailsPojo stock = cache.get(symbol.toLowerCase());
+		if (stock == null) {
 			// tryLoadingFromFileCache(symbol);
+			SymbolChecker.getInstance().markSymbolValid(symbol);
+			QueryFormatter formatter = new QueryFormatter();
+			StockAPICrawlerImpl crawler = new StockAPICrawlerImpl();
+			StockAPICrawledResultProcessor processor = new StockAPICrawledResultProcessor();
+			String query = formatter.getStockQuery(symbol);
+			List<StockDetailsPojo> result;
+			try {
+				result = processor.processJsonResult(crawler.getHttp(query));
+				StockCacheManager.getInstance().putAll(result);
+			} catch (IOException e) {
+				FileLogger.getInstance()
+						.log("Error while getting respounse for stock - " + symbol + ", error - " + e.getMessage());
+			}
 		}
 		return cache.get(symbol.toLowerCase());
 	}

@@ -19,4 +19,8 @@ public class QueryFormatter {
 			return base_url + query_start_part + inClause.toString() + query_end_part;
 		}
 	}
+
+	public String getStockQuery(String symbol) {
+		return base_url + query_start_part + symbol + query_end_part;
+	}
 }
